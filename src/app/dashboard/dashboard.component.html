@@ -1,0 +1,24 @@
+
+    <mat-card fxLayoutAlign="center center" fxFlexFill class="class" >
+        <div class="container">
+            <div class="card">
+                <h1 class="title">Weather Details</h1>
+                <p class="subtitle">
+                    Current weather conditions : {{weatherData?.current.weather_descriptions}}
+                    <br>City : {{weatherData?.location.name}} 
+                    <br> Country : {{weatherData?.location.country}} 
+                    <br> Region : {{weatherData?.location.region}} 
+                    <br> Temperature : {{weatherData?.current.temperature}}
+                    <br> Humidity : {{weatherData?.current.humidity}}
+                    <br> UV Index : {{weatherData?.current.uv_index}} 
+                    <br> Pressure : {{weatherData?.current.pressure}} 
+                    <br> Precip : {{weatherData?.current.precip}}
+                    <br> Wind Degree : {{weatherData?.current.wind_degree}}
+                    <br> Wind Direction: {{weatherData?.current.wind_dir}}
+                    <br> Wind speed: {{weatherData?.current.wind_speed}} 
+                </p>
+                <button mat-raised-button color="primary" class="btn" (click)="showWeather()">Weather</button>
+            </div>
+            <div class="blob"></div>
+        </div>
+    </mat-card>
